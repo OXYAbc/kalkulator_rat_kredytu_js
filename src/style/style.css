@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/src/img/bg.webp);
+    background-image: url(./src/img/bg.webp);
     flex-wrap: wrap;
     text-align: center;
 }
