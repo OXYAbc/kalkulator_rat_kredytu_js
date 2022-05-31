@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" onload="getValues()">
+        <div class="inputy">
+            <h1  class="title">Kalkulator kredytu</h1>
+            <p>Kwota kredytu w euro:</p>
+            <input id="kwota" type="number" min="1" max="30000000" value="1" onchange="getValues()">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="30000000" value="1" class="slider__kwota" id="kwota"
+                    onchange="getValues()">
+            </div>
+            <p>Oprocentowanie w skali roku: %</p>
+            <input id="input__number__procent" type="number" min="0" max="25" value="1" step=".1"
+                onchange="getValues()">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="25" value="0" class="slider__procent" onchange="getValues()">
+            </div>
+            <p>Okres spłaty kredytu w latach: </p>
+            <input id="raty" type="number" min="1" max="40" value="1" step="1" onchange="getValues()">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="40" value="1" class="slider__okres" id="kwota" onchange="getValues()">
+            </div>
+            <p>Wkład własny: </p>
+            <input id="wklad" type="number" min="0" max="30000000" value="0" step="1" onchange="getValues()">
+            <div class="slidecontainer">
+                <input type="range" min="0" max="30000000" value="0" class="slider__wklad" id="kwota"
+                    onchange="getValues()">
+            </div>
+            <button onclick="getValues()">Oblicz</button>
+        </div>
+        <div class="calc" onload="getValues()">
+            <div class="wynik">
+                <h3 id="payment">0.00 <span style="color:#FFB606; ">€</span></h3>
+                <h4>Rata miesięczna</h4>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./src/js/calc.js"></script>
+
+</html>
